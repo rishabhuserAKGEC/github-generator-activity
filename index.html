@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>GitHub Activity Generator - Project Overview</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 32px;
+      background: #f7f7f7;
+    }
+    h1 {
+      color: #24292e;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    th, td {
+      border: 1px solid #e1e4e8;
+      padding: 12px 16px;
+      text-align: left;
+    }
+    th {
+      background: #f6f8fa;
+    }
+    .btn {
+      padding: 8px 16px;
+      margin: 6px 4px;
+      border: none;
+      border-radius: 4px;
+      background: #2ea44f;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #22863a;
+    }
+    #analysis {
+      margin-top: 24px;
+      padding: 16px;
+      background: #fff;
+      border: 1px solid #e1e4e8;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    }
+  </style>
+</head>
+<body>
+  <h1>GitHub Activity Generator</h1>
+  <table>
+    <tr>
+      <th>Project Name</th>
+      <td>github-activity-generator</td>
+    </tr>
+    <tr>
+      <th>Description</th>
+      <td>Script to generate a beautiful GitHub Contributions Graph by creating commits for every day within the last year.</td>
+    </tr>
+    <tr>
+      <th>Main Language</th>
+      <td>Python</td>
+    </tr>
+    <tr>
+      <th>Usage</th>
+      <td>
+        <ul>
+          <li>Create an empty GitHub repository (do not initialize).</li>
+          <li>Download and run <code>contribute.py</code> with your repo link.</li>
+          <li>Script generates daily commits and pushes to your repo.</li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th>Repository</th>
+      <td>
+        <a href="https://github.com/rishabhuserAKGEC/" target="_blank">View on GitHub</a>
+      </td>
+    </tr>
+  </table>
+
+  <div style="margin-top:16px;">
+    <button class="btn" onclick="window.open('https://github.com/rishabhuserAKGEC/', '_blank')">View Repo</button>
+    <button class="btn" onclick="showAnalysis()">Analyze Project</button>
+    <button class="btn" onclick="location.reload()">Refresh</button>
+  </div>
+
+  <div id="analysis" style="display:none;"></div>
+
+  <script>
+    function showAnalysis() {
+      const analysis = `
+        <strong>Project Analysis:</strong><br>
+        <ul>
+          <li><b>Purpose:</b> This project automates the creation of git commits to populate your GitHub contribution graph, making it appear more active over the past year.</li>
+          <li><b>How it works:</b> The script initializes a git repo, creates a file, and generates 0-20 commits per day for the last year, then pushes these to a remote repository.</li>
+          <li><b>Intended Use:</b> Educational and demonstration purposes, showing how GitHub contribution graphs work. Not recommended for misrepresenting actual coding activity.</li>
+          <li><b>Customization:</b> Users can adjust commit frequency and date ranges by modifying the script.</li>
+        </ul>
+        <em>Note: This project is for educational use and should be used responsibly, as artificially inflating activity may be against GitHub's terms of service.</em>
+      `;
+      document.getElementById('analysis').innerHTML = analysis;
+      document.getElementById('analysis').style.display = 'block';
+    }
+  </script>
+</body>
+</html>

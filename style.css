@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f6f8fa;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    color: #24292e;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background: #2ea44f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background: #22863a;
+  }
+  
+  #graphContainer {
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .contribution-row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contribution-cell {
+    width: 12px;
+    height: 12px;
+    margin: 1px;
+    border-radius: 2px;
+    background: #ebedf0;
+    transition: background 0.2s;
+  }
+  
+  .level-1 { background: #c6e48b; }
+  .level-2 { background: #7bc96f; }
+  .level-3 { background: #239a3b; }
+  .level-4 { background: #196127; }
+  
